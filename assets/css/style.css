@@ -604,6 +604,8 @@ body{ background-color: #24305e;}
     {
         display: none;
     }
+    .episode
+    {display: block !important;}
   }
   .icerik
   {
@@ -622,4 +624,51 @@ body{ background-color: #24305e;}
     width: 80%;
     border-radius: 10px;
     height: 315px;
+  }
+  .episode 
+  {
+    height: 315px;
+    width: 30%;
+    margin: 0px 20px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    z-index: 2;
+  }
+  .episode li 
+  {
+    list-style: none;
+    position: relative;
+    padding-right: 10px;
+  }
+  .episode li a
+  {
+    text-decoration: none;
+    color: #aaa;
+  }
+  .episode::-webkit-scrollbar {
+    width: 10px;
+  }
+  .episode::-webkit-scrollbar-thumb {
+    background: #eee;
+    border-radius: 20px;
+  }
+  
+  .episode::-webkit-scrollbar-track {
+    background: #aaa;
+    border-radius: 10px;
+  }
+  
+  /*for mozilla firefox*/
+  .episode::-moz-scrollbar {
+    width: 10px;
+  }
+  .episode::-moz-scrollbar-thumb {
+    background: #eee;
+    border-radius: 20px;
+  }
+  
+  .episode::-moz-scrollbar-track {
+    background: #aaa;
+    border-radius: 10px;
   }
