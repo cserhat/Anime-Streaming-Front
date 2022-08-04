@@ -374,7 +374,7 @@ body{ background-color: #24305e;}
 
 .btn button
 {
-    position: absolute;
+    position: relative;
     right: 10px;
     bottom: 10px;
     background-color: black;
@@ -606,6 +606,7 @@ body{ background-color: #24305e;}
     }
     .episode
     {display: block !important;}
+
   }
   .icerik
   {
@@ -672,3 +673,77 @@ body{ background-color: #24305e;}
     background: #aaa;
     border-radius: 10px;
   }
+  .container {  display: grid;
+    gap: 15px 0px;
+    margin: 30px;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Fansub Episiode ."
+      "Video Video Video"
+      "Info-area Info-area Info-area"
+      "Status Status Status";
+    width: 100%;
+  }
+  
+  .Fansub { grid-area: Fansub;
+   }
+  
+  .Episiode { grid-area: Episiode; }
+  .Episiode h2
+  {
+    margin-left: 30vh;
+    color:#999;
+  }
+  
+  .Video { grid-area: Video; }
+  
+  .Info-area { grid-area: Info-area; }
+  
+  .Status { grid-area: Status; }
+  
+ .fansub_select
+  {
+    min-width: 200px;
+    max-width: 60%;
+    width: 100%;
+    background-color: transparent;
+    border:2px solid #695CFE ;
+    border-radius: 2px;
+    height: 35px;
+  }
+.fansub_select option
+  {
+    background-color: #e4e9f7;
+    border:2px solid #695CFE ;
+  }
+.video{
+  height: 400px;
+  width: 100%;
+  border-radius: 5px;
+}
+#video-link
+{
+  height: 35px;
+  background-color: transparent;
+  border:2px solid #695CFE ;
+  width: 80px;
+  cursor: pointer;
+}
+  @media screen and (max-width: 640px) {
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    margin: 30px;
+    margin-left: 5vh;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "Fansub Fansub Fansub"
+      "Episiode Episiode Episiode"
+      "Video Video Video"
+      "Info-area Info-area Info-area"
+      "Status Status Status";
+    width: 100%;
+  }
+}
